@@ -1,70 +1,71 @@
-# Maintenance Rules
+# 维护规则
 
-## Purpose
+## 目的
 
-This file defines how Codex should maintain the short-reach optical interconnect research workflow across the Git repository, local folders, and Obsidian notes.
+本文档定义 Codex 如何维护“芯片互连与AI基础设施”专题的信息流、报告文件、本地目录、Obsidian 笔记和专题 Git 仓库。
 
-## Trigger Rule
+## 触发规则
 
-When generating a "芯片互连与AI基础设施" report:
+生成“芯片互连与AI基础设施”报告时：
 
-- If the trigger date is Monday and the current week report does not exist, generate a weekly report.
-- Otherwise generate a daily report.
-- If the user explicitly asks for daily or weekly mode, follow the explicit request.
+- 如果触发日期是周一，且本周周报不存在，则生成周报。
+- 其他情况默认生成日报。
+- 如果用户明确指定日报或周报，则优先执行用户指定模式。
 
-## Required Save Targets
+## 必须保存的目标路径
 
-Daily report path pattern:
+日报路径：
 
-- Obsidian: `/Users/ganxuanzhi/Documents/Obsidian Vault/芯片互连资讯/output/YYYY-MM-DD.md`
-- Learning repo mirror: `/Users/ganxuanzhi/学习/Learning_repo/芯片互连资讯/YYYY-MM-DD.md`
-- Git research repo: `/Users/ganxuanzhi/学习/Short-Reach-Optical-Interconnect-Research/reports/daily/YYYY-MM-DD.md`
+- Obsidian：`/Users/ganxuanzhi/Documents/Obsidian Vault/芯片互连资讯/output/YYYY-MM-DD.md`
+- Learning_repo 镜像：`/Users/ganxuanzhi/学习/Learning_repo/芯片互连资讯/YYYY-MM-DD.md`
+- 专题 Git 仓库：`/Users/ganxuanzhi/学习/Short-Reach-Optical-Interconnect-Research/reports/daily/YYYY-MM-DD.md`
 
-Weekly report path pattern:
+周报路径：
 
-- Obsidian: `/Users/ganxuanzhi/Documents/Obsidian Vault/芯片互连资讯/output/weekly-YYYY-WXX.md`
-- Learning repo mirror: `/Users/ganxuanzhi/学习/Learning_repo/芯片互连资讯/weekly-YYYY-WXX.md`
-- Git research repo: `/Users/ganxuanzhi/学习/Short-Reach-Optical-Interconnect-Research/reports/weekly/weekly-YYYY-WXX.md`
+- Obsidian：`/Users/ganxuanzhi/Documents/Obsidian Vault/芯片互连资讯/output/weekly-YYYY-WXX.md`
+- Learning_repo 镜像：`/Users/ganxuanzhi/学习/Learning_repo/芯片互连资讯/weekly-YYYY-WXX.md`
+- 专题 Git 仓库：`/Users/ganxuanzhi/学习/Short-Reach-Optical-Interconnect-Research/reports/weekly/weekly-YYYY-WXX.md`
 
-## Source Quality Order
+## 信源权威性排序
 
-When ranking and filtering information, use this authority order:
+筛选和排序资讯时，按以下优先级处理：
 
-1. Standards bodies, conference papers, and official programs: OFC, ISSCC, DesignCon, ECOC, IEEE, OIF, OCP, UALink, UEC.
-2. Company official announcements and product pages.
-3. Reputable technology media and industry analysis.
-4. Analyst blogs and social posts, only as trend context.
+1. 标准组织、会议论文、官方 program：OFC、ISSCC、DesignCon、ECOC、IEEE、OIF、OCP、UALink、UEC。
+2. 公司官方公告、产品页、白皮书。
+3. 可信科技媒体和产业媒体。
+4. 分析师博客、社交媒体观点，只能作为趋势参考。
 
-Do not invent technical specifications. If a metric is not present in a primary source, mark it as an analyst estimate or omit it.
+禁止编造技术指标。如果某个速率、功耗、链路预算、量产时间、客户信息没有出现在一手来源中，则必须标明为机构预测/媒体报道，或直接省略。
 
-## Report Quality Checklist
+## 报告质量检查
 
-Before saving a report:
+保存报告前必须检查：
 
-- Every item has a source URL.
-- Papers include conference name, arXiv number, or official program reference when available.
-- Daily reports include SerDes, optics/modules, AI servers, infrastructure, papers, vendors, events, and share cards.
-- Weekly reports extract high-signal `🔥` and `⭐` items from daily reports and add deep-dive searches.
-- Domestic and international vendors are both represented when relevant.
-- Chinese is used for prose; technical terms may remain in English.
+- 每条信息都有来源 URL。
+- 论文条目尽量包含会议名、arXiv 编号或官方 program 链接。
+- 日报包含 SerDes、光学/光模块、AI 服务器、基础设施、论文、厂商动态、会议活动、分享卡片等板块。
+- 周报从当周日报中抽取 `🔥` 和 `⭐` 条目作为基础素材，并补充深度搜索。
+- 厂商动态尽量覆盖国内外。
+- 正文使用中文，必要技术术语可以保留英文。
 
-## Sync Checklist
+## 同步检查清单
 
-After generating a report:
+生成报告后必须执行：
 
-1. Save the canonical Markdown file to Obsidian output.
-2. Copy the same content to the Learning repo mirror.
-3. Copy the same content to this Git research repository.
-4. Confirm all three files exist.
-5. Count unique source links and report the count in the execution summary.
-6. Commit and push the Git research repository so the report is maintained in the remote repository.
-7. Include the commit hash and pushed branch in the execution summary.
+1. 将 canonical Markdown 保存到 Obsidian 输出目录。
+2. 将同一份内容复制到 Learning_repo 镜像目录。
+3. 将同一份内容复制到专题 Git 仓库。
+4. 确认三处文件都存在。
+5. 统计去重来源链接数量，并在执行报告中说明。
+6. 提交并推送专题 Git 仓库，确保报告在远端仓库中维护。
+7. 在执行报告中说明 commit hash 和推送分支。
 
-## Git Rules
+## Git 规则
 
-- Repository remote: `https://github.com/yuanfang11223344/Short-Reach-Optical-Interconnect-Research.git`
-- Default local worktree: `/Users/ganxuanzhi/学习/Short-Reach-Optical-Interconnect-Research`
-- Commit/push policy: generated reports and maintenance-rule updates for this topic are committed and pushed to this repository as part of the sync workflow.
-- Confirmation-required operations: destructive commands, history rewrites, branch deletion, reset, force push, or overwriting upstream/local files outside the generated report and maintenance-rule scope.
-- Upstream overwrite policy: check and report upstream state only; do not pull, reset, or overwrite without confirmation.
-- Ignore `.DS_Store`, temporary downloads, browser caches, and generated scratch files.
+- 远端仓库：`https://github.com/yuanfang11223344/Short-Reach-Optical-Interconnect-Research.git`
+- 默认本地工作区：`/Users/ganxuanzhi/学习/Short-Reach-Optical-Interconnect-Research`
+- 提交/推送策略：本专题生成的报告和维护规则更新，属于正常同步流程，生成后应提交并推送到本仓库。
+- 需要用户确认的操作：破坏性命令、历史改写、删除分支、reset、force push、覆盖上游内容、覆盖本专题生成范围之外的无关文件。
+- 上游覆盖策略：只检测和报告上游状态；未经确认，不自动 pull、reset 或覆盖本地文件。
+- 文件卫生：不要提交 `.DS_Store`、临时下载、浏览器缓存、scratch 文件等无关内容。
+

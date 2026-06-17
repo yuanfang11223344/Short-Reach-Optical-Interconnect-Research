@@ -1,58 +1,58 @@
-# Report Sync Rules
+# 报告同步规则
 
-## Canonical Topic
+## 专题名称
 
-Topic name: `芯片互连与AI基础设施`
+专题名：`芯片互连与AI基础设施`
 
-The report workflow covers short-reach optical interconnect, high-speed SerDes, optical modules, AI rack-scale systems, and compute facility infrastructure.
+本专题覆盖短距光互连、高速 SerDes、光模块、AI rack-scale 系统和计算中心基础设施。
 
-## Active Storage Targets
+## 当前生效的存储目标
 
-| Role | Path | Notes |
+| 角色 | 路径 | 说明 |
 |---|---|---|
-| Obsidian reading copy | `/Users/ganxuanzhi/Documents/Obsidian Vault/芯片互连资讯/output` | Main notebook output for daily reading and search. |
-| Learning repo mirror | `/Users/ganxuanzhi/学习/Learning_repo/芯片互连资讯` | Mirror inside the user's existing learning knowledge repo. |
-| Research Git repo | `/Users/ganxuanzhi/学习/Short-Reach-Optical-Interconnect-Research/reports` | Version-controlled research archive for this specific topic. |
+| Obsidian 阅读副本 | `/Users/ganxuanzhi/Documents/Obsidian Vault/芯片互连资讯/output` | 日常阅读、检索和周报素材抽取使用。 |
+| Learning_repo 学习库镜像 | `/Users/ganxuanzhi/学习/Learning_repo/芯片互连资讯` | 纳入用户已有学习知识库结构。 |
+| 专题 Git 归档 | `/Users/ganxuanzhi/学习/Short-Reach-Optical-Interconnect-Research/reports` | 本专题的版本化研究归档。 |
 
-## File Naming
+## 文件命名
 
-Daily:
+日报：
 
 ```text
 YYYY-MM-DD.md
 ```
 
-Weekly:
+周报：
 
 ```text
 weekly-YYYY-WXX.md
 ```
 
-`YYYY-WXX` uses ISO week numbering.
+其中 `YYYY-WXX` 使用 ISO week 编号。
 
-## Directory Mapping
+## 目录映射
 
-| Report type | Obsidian | Learning repo | Research Git repo |
+| 报告类型 | Obsidian | Learning_repo | 专题 Git 仓库 |
 |---|---|---|---|
-| Daily | `output/YYYY-MM-DD.md` | `YYYY-MM-DD.md` | `reports/daily/YYYY-MM-DD.md` |
-| Weekly | `output/weekly-YYYY-WXX.md` | `weekly-YYYY-WXX.md` | `reports/weekly/weekly-YYYY-WXX.md` |
+| 日报 | `output/YYYY-MM-DD.md` | `YYYY-MM-DD.md` | `reports/daily/YYYY-MM-DD.md` |
+| 周报 | `output/weekly-YYYY-WXX.md` | `weekly-YYYY-WXX.md` | `reports/weekly/weekly-YYYY-WXX.md` |
 
-## Sync Invariant
+## 同步一致性要求
 
-For the same report date/week, all three Markdown copies must contain the same report body. If a typo or source correction is made after publication, update all three copies in the same maintenance turn.
+同一个日期或同一个周次的三份 Markdown 报告，正文内容必须一致。如果发布后修正错字、来源链接或技术表述，必须在同一次维护中同步更新三处副本。
 
-## Execution Report Format
+## 执行报告格式
 
-After each generation or sync run, report:
+每次生成或同步后，执行报告需要包含：
 
-- Mode: daily or weekly.
-- Search/source directions used.
-- Number of selected events/items.
-- Number of unique source links.
-- Saved paths.
-- Git commit hash and pushed branch for the research repository.
+- 模式：日报或周报。
+- 检索方向或信源数量。
+- 选入事件/条目数量。
+- 去重来源链接数量。
+- 保存路径。
+- 专题 Git 仓库的 commit hash 和推送分支。
 
-## Manual Verification Commands
+## 手动校验命令
 
 ```bash
 test -f "/Users/ganxuanzhi/Documents/Obsidian Vault/芯片互连资讯/output/YYYY-MM-DD.md"
@@ -61,3 +61,4 @@ test -f "/Users/ganxuanzhi/学习/Short-Reach-Optical-Interconnect-Research/repo
 rg -o "https?://[^ )]+" "/Users/ganxuanzhi/Documents/Obsidian Vault/芯片互连资讯/output/YYYY-MM-DD.md" | sort -u | wc -l
 git -C "/Users/ganxuanzhi/学习/Short-Reach-Optical-Interconnect-Research" status --short
 ```
+
