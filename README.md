@@ -32,7 +32,7 @@
 | 专题 Git 工作区 | `/Users/ganxuanzhi/学习/Short-Reach-Optical-Interconnect-Research` |
 | Obsidian 输出目录 | `/Users/ganxuanzhi/Documents/Obsidian Vault/芯片互连资讯/output` |
 | Obsidian 管理说明 | `/Users/ganxuanzhi/Documents/Obsidian Vault/芯片互连资讯/管理说明.md` |
-| Learning_repo 镜像目录 | `/Users/ganxuanzhi/学习/Learning_repo/芯片互连资讯` |
+| 本地阅读副本 | `/Users/ganxuanzhi/学习/Short-Reach-Optical-Interconnect-Research/报告` |
 
 ## 核心维护规则
 
@@ -44,7 +44,7 @@
 每次由 Codex 生成本专题日报或周报，都必须同步到三处：
 
 1. Obsidian 输出目录。
-2. Learning_repo 学习库镜像目录。
+2. 本地阅读副本目录。
 3. 本专题 Git 仓库的 `报告/日报/` 或 `报告/周报/`。
 
 本专题报告和维护规则更新，属于本仓库的正常维护范围，应在同步后提交并推送到远端仓库。破坏性操作、历史改写、force push、删除分支、覆盖无关文件等操作仍必须先获得用户明确确认。
