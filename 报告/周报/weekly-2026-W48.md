@@ -1,8 +1,8 @@
 # 芯片互连与 AI 基础设施周报｜2026-W48
 
-> 覆盖 2026-11-16 至 2026-11-22；由本周日报抽取 `🔥` / `⭐` 条目并结合公开一手资料复核，检索截止 2026-11-22（Asia/Shanghai）。会议、厂商公告、市场研究和预印本分别标注，不将其混作已部署事实。
+> 覆盖 2026-11-16 至 2026-11-23；由本周日报抽取 `🔥` / `⭐` 条目并结合公开一手资料复核，检索截止 2026-11-23（Asia/Shanghai）。会议、厂商公告、市场研究和预印本分别标注，不将其混作已部署事实。
 
-## 本周最重要的 6 件事
+## 本周最重要的 7 件事
 
 1. 🔥 **光学互连成为规模化 AI 的系统议题。** PECC 的议程将 scale-up、scale-out、scale-across 与 optical switching 放在同一框架中；这更像架构讨论的共同语言，而不是单一的推荐方案。[来源](https://www.optica.org/events/industry_events/2026/pecc_summit_optica_apc_photonic_enabled_cloud_computing_summit/schedule/)
 2. ⭐ **CPO 互操作参考架构启动协作。** Lightmatter 向 OCP 发起共享参考架构倡议；现阶段应关注随后公开的规范、验证方法和参与者交付物。[来源](https://www.ofcconference.org/news-media/exhibitor-news/lightmatter-announces-reference-architecture-initiative-with-industry-leaders-in-the-open-compute-pr/)
@@ -10,6 +10,7 @@
 4. ⭐ **784-Gb/s/λ 片间研究展示多维复用潜力。** 11 月 20 日日报收录的 Photonics Research early posting 属于研究演示，不能替代可插拔或量产器件规格。[来源](https://opg.optica.org/prj/upcoming_pdf.cfm?id=603843)
 5. 🔥 **网络需求信号与供给约束并存。** Dell'Oro 的 3Q26 摘要称 optical transport 市场同比增长 24%、相关北美云服务商厂商收入同比增长 75%；这是机构统计/判断，非运营商或设备商逐项目部署清单。[来源](https://www.delloro.com/newsroom/optical-transport-market-growth-3q26/)
 6. ⭐ **高芯数布线进入 AI/HPC 工程讨论。** STL 的 SC26 展示包含高密度光纤和连接器方案，说明机房布线密度仍是系统设计变量；展会资料未披露客户或部署规模。[来源](https://stl.tech/sc26/)
+7. 🔥 **448G 的竞争进入“可实现 reach + 系统接口”阶段。** OIF 当前工作页同时列出 CEI-448G-VSR/LR 的链路目标，以及 12.8 Tb/s NPO Module 对液冷、外部激光和连接器的接口工作。这些项目仍在开发，不能据此推导现货规格或量产进度。[来源](https://www.oiforum.com/technical-work/current-work/)
 
 ## 本周关键技术进展 3 篇深读
 
@@ -33,12 +34,14 @@ OCP 的 OCS 白皮书梳理了 robotic、MEMS、liquid-crystal、piezo 与 silic
 | NewPhotonics | 宣传面向 CPO 的 self-calibrating heaterless MRM 技术 | 厂商展会公告，未给出第三方系统验证或量产信息 [来源](https://www.ofcconference.org/news-media/exhibitor-news/newphotonics-introduces-syncra-self-calibrating-heaterless-mrm-solution-to-drive-next-generation-hig/) |
 | STL | SC26 展示高密度光纤、连接器和机柜级方案 | 展示材料，未说明客户与部署规模 [来源](https://stl.tech/sc26/) |
 | OIF 成员生态 | 列出 CEI-448G/224G、CMIS、co-packaging 与 EEI 的互操作展示方向 | 活动公告；需追踪规范版本、测试条件与结果 [来源](https://www.ofcconference.org/news-media/exhibitor-news/oif-demonstrates-industry-wide-interoperability-at-scale-at-ofc-2026-advancing-energy-efficiency-p/) |
+| AMD / OCP | Helion rack blueprint 计划贡献规格，OCP 总结称 partner configurations 计划于 11 月出现 | 计划/社区公开信息，尚非客户采用或出货佐证 [来源](https://www.opencompute.org/news/2026-ocp-global-summit-by-the-numbers/) |
 
 ## 趋势观察
 
 - **互连选择正在系统化：** scale-up、scale-out 与 scale-across 的层次划分，会影响电互连、pluggable optics、NPO/CPO 与 OCS 的取舍。
 - **开放不等于可部署：** 倡议、路线图和会议 demo 是必要信号，但规格文本、互操作数据、可维护性和供给才是下一个验证层。
 - **基础设施约束前移：** high-density cabling、热管理、电力与控制面的设计，已与 lane rate 同样影响 AI fabric 的可扩展性。
+- **接口定义开始跨越边界：** 448G electrical reach、near-package optics、液冷和 laser-source 管理正在被放进同一规范工作面；工程评估应把这些约束连同故障维护一起验收。
 
 ## 下周关注
 
@@ -46,6 +49,7 @@ OCP 的 OCS 白皮书梳理了 robotic、MEMS、liquid-crystal、piezo 与 silic
 2. UALink 是否发布更明确的测试、生态或实现状态材料。
 3. OIF/行业组织是否披露 CEI-448G 与相关管理接口的互操作细节。
 4. OCS 方案是否给出端到端调度、故障恢复与实际工作负载证据。
+5. CEI-448G/NPO 项目是否公开版本、测试条件和跨厂商互操作结果。
 
 ## 分享卡片
 
